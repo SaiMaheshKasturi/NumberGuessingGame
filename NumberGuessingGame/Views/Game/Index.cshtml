@@ -1,0 +1,22 @@
+﻿@model NumberGuessingGame.Models.GameModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1>Guess the Number!</h1>
+    <form asp-action="Guess" method="post">
+        <label>Your Guess: </label>
+        <input type="number" name="guess" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>@Model.ResultMessage</p>
+
+    <form asp-action="Reset" method="post">
+        <button type="submit">Play Again</button>
+    </form>
+</body>
+</html>
